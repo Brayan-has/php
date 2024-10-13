@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class mensaje extends Controller
+class MensajeController extends Controller
 {
    public function mensaje()
 {
