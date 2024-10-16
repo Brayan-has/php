@@ -1,0 +1,13 @@
+[phases.build]
+commands = [
+  "composer install",
+  "npm ci --only=production",
+  "php artisan optimize",
+  "php artisan config:cache",
+  "php artisan route:cache",
+  "php artisan view:cache",
+  "php artisan migrate --force"
+]
+
+[phases.start]
+cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
